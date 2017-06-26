@@ -1,17 +1,25 @@
-import Library from './library';
-import './style.css';
+import Library from './library'
+import logger from './logger'
+import './style.css'
 
+
+//index.js start
 console.log('index.js running')
 
 console.log(module)
 if (module.hot) {
   module.hot.accept('./library', function() {
-    // console.log('Accepting the updated library module!');
-    Library.update();
-    Library.log();
+    console.clear()
+    console.log('hrm updating')
+    Library.update()
   })
-} else{
-  
+  module.hot.accept('./logger', function() {
+    console.clear()
+    logger.update()
+  })
+} else {
 }
 
-Library.update();
+Library.init()
+Library.update()
+//index.js end

@@ -1,17 +1,18 @@
-import * as d3 from 'd3/build/d3.node'
-// import * as jp from 'd3-jetpack'
-// import 'd3-jetpack'
+'
 
 // console.clear()
 
 // console.log(jp.nestBy, d3.select('body').at)
+
+
+// magic-id index.js start
 
 var width = window.innerWidth
 var height = width
 
 function init() {
   return
-  var svg = d3.select('body').html('').append('svg').at({ width, height })
+  var svg = d3$1.select('body').html('').append('svg').at({ width, height })
 
   svg.appendMany(d3.range(100), 'circle')
 }
@@ -40,4 +41,5 @@ export default {
   init
 }
 
+// magic-id index.js end
 
